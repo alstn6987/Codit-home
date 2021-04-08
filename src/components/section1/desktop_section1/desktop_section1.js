@@ -14,32 +14,40 @@ const DesktopSection1 = () => {
         <figure>
           <img src={btn_bill} alt="bill" />
           <figcaption>
-            <b>의안 검색</b> 및 <b>모니터링</b>
+            <em>의안 검색</em> 및 <em>모니터링</em>
           </figcaption>
         </figure>
       </Link>
       <Link to="/app/covid19">
         <figure>
           <img src={btn_covid} alt="covid" />
-          <figcaption>코로나19 정책 및 입법</figcaption>
+          <figcaption>
+            <em>코로나19</em> 정책 및 입법
+          </figcaption>
         </figure>
       </Link>
       <Link to="/">
         <figure>
           <img src={btn_estate} alt="estate" />
-          <figcaption>부동산 정책 및 입법</figcaption>
+          <figcaption>
+            <em>부동산</em> 정책 및 입법
+          </figcaption>
         </figure>
       </Link>
       <Link to="/">
         <figure>
           <img src={btn_politician} alt="politician" />
-          <figcaption>국회의원 정보</figcaption>
+          <figcaption>
+            <em>국회의원</em> 정보
+          </figcaption>
         </figure>
       </Link>
       <Link to="/app/insights">
         <figure>
           <img src={btn_insight} alt="insight" />
-          <figcaption>인사이트</figcaption>
+          <figcaption>
+            <em>인사이트</em>
+          </figcaption>
         </figure>
       </Link>
     </div>

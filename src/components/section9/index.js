@@ -1,8 +1,8 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import DesktopSection8 from "./desktop_section8/desktop_section8";
+import DesktopSection9 from "./desktop_section9/desktop_section9";
 
-const Section8 = () => {
+const Section9 = () => {
   const isMobile = useMediaQuery({
     maxWidth: 375,
   });
@@ -20,9 +20,9 @@ const Section8 = () => {
     <>
       {/* {isTablet && }
       {isMobile && } */}
-      {isDesktop && <DesktopSection8 />}
+      {isDesktop && <DesktopSection9 />}
     </>
   );
 };
 
-export default Section8;
+export default Section9;
