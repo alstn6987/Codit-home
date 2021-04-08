@@ -1,19 +1,30 @@
 .DesktopSection1 {
+
     display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(5, 1fr);
     height: 300px;
+    
+    justify-content: center;
+    align-content: center;
+
+    grid-template-columns: repeat(5, 1fr);
+
     gap: 30px 25px;
 
     figure {
+        width: 140px;
         justify-content: center;
-        width: 200px;
+        
         img {
             width: 140px;
         }
+
         figcaption {
-            
+            width: 180px;
+            margin: 10px;
+            font-weight: bold;
         }
+    }
+    figure:hover{
+        color:rgb(46, 152, 152);
     }
 }
