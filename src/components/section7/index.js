@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import DesktopSection7 from "./desktop_section7/desktop_section7";
 
 const Section7 = () => {
   const isMobile = useMediaQuery({
