@@ -1,8 +1,41 @@
 .DesktopSection2 {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     height: 300px;
-    background-color: aliceblue;
-    
+    background-color: white;
+    .container1{
+        display:block;
+        margin-bottom:40px;
+        h1{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        h2{
+            font-size: 16px;
+            color:gray;
+        }
+    }
+    .container2{
+        display:grid;
+        grid-template-columns: repeat(6, 220px);
+        gap: 30px 25px;
+
+        div{
+            margin-bottom: 20px;
+            font-size: 20px;
+            color:gray;
+
+        }
+        .number{
+            font-size: 40px;
+            font-weight: bold;
+            color:rgb(22, 64, 125)
+        }
+    }
+    b{
+        font-weight:bold;
+    }
+
 }

@@ -1,0 +1,45 @@
+.DesktopFooter{
+    display: flex;
+    height: 220px;
+    justify-content: center;
+
+    .container{
+        display: flex;
+        width: 1000px;
+        height: inherit;
+        justify-content: space-between;
+        padding: 20px;
+        .containerLeft{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+
+            div{
+                display: flex;
+                margin-top: 5px;
+            }
+            hr{
+                border: 1px solid black;
+            }
+
+        }
+        .containerRight{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:flex-end;
+            .logos{
+                justify-self: flex-end;
+                display: flex;
+                justify-self: center;
+                align-self: center;
+                img{
+                    margin: 5px;
+                }
+            }
+        }
+
+    }
+}

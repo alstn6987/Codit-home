@@ -1,18 +1,50 @@
 .DesktopSection6 {
     display: flex;
+    height: 450px;
     justify-content: center;
     align-items: center;
-    padding: 100px;
-    height: 500px;
     background-color: white;
-    h1 {
-        font-size: 25px;
-    }
 
-    p{
-        font-size: 16px;
-    }
-    img {
-        width: 500px;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 900px;
+        height: inherit;
+        img.politician {
+            width: 500px;
+            align-self: flex-end;
+        }
+        .textBlock {
+            margin: 20px;
+
+            h1 {
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+                line-height: 200%;
+            }
+
+            .linkWrapper {
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .colorTextPurple {
+                color: purple;
+            }
+
+            .linkImg {
+                margin-left: 8px;
+                width: 10px;
+            }
+        }
+
+
     }
 }

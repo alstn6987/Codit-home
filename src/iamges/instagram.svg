@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-2{fill:#1e005a}
+        </style>
+    </defs>
+    <g id="instagram" transform="translate(-1278 -1235)">
+        <rect id="사각형_2418" width="40" height="40" fill="#f4f4f4" rx="8" transform="translate(1278 1235)"/>
+        <g id="instagram-2" transform="translate(1286 1243)">
+            <g id="그룹_1183">
+                <g id="그룹_1182">
+                    <path id="패스_3329" d="M16.5 0h-9A7.5 7.5 0 0 0 0 7.5v9A7.5 7.5 0 0 0 7.5 24h9a7.5 7.5 0 0 0 7.5-7.5v-9A7.5 7.5 0 0 0 16.5 0zm5.25 16.5a5.256 5.256 0 0 1-5.25 5.25h-9a5.256 5.256 0 0 1-5.25-5.25v-9A5.256 5.256 0 0 1 7.5 2.25h9a5.256 5.256 0 0 1 5.25 5.25z" class="cls-2"/>
+                </g>
+            </g>
+            <g id="그룹_1185" transform="translate(5.365 5.365)">
+                <g id="그룹_1184">
+                    <path id="패스_3330" d="M134.635 128a6.635 6.635 0 1 0 6.635 6.635 6.635 6.635 0 0 0-6.635-6.635zm0 10.782a4.147 4.147 0 1 1 4.147-4.147 4.153 4.153 0 0 1-4.147 4.147z" class="cls-2" transform="translate(-128 -128)"/>
+                </g>
+            </g>
+            <g id="그룹_1187" transform="translate(17.517 4.715)">
+                <g id="그룹_1186">
+                    <circle id="타원_112" cx=".884" cy=".884" r=".884" class="cls-2"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

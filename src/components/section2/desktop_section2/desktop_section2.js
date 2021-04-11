@@ -1,3 +1,5 @@
+// 데이터 현황 표기 섹션
+
 import React from "react";
 import "./desktop_section2.scss";
 
@@ -13,31 +15,35 @@ const DesktopSection2 = () => {
   return (
     <div className="DesktopSection2">
       <div>
-        <h1>코딧의 데이터 현황</h1>
-        <h2>2021년 {month}월 기준</h2>
-        <div className="wrapper">
+        <div className="container1">
+          <h1>
+            <b>코딧</b>의 <b>데이터</b> 현황
+          </h1>
+          <h2>2021년 {month}월 기준</h2>
+        </div>
+        <div className="container2">
           <div className="bill">
-            {billNumber}
+            <div className="number">{billNumber}</div>
             <div>의안</div>
           </div>
           <div className="policy">
-            {policyNumber}
+            <div className="number">{policyNumber}</div>
             <div>정책</div>
           </div>
           <div className="law">
-            {lawNumber}
+            <div className="number">{lawNumber}</div>
             <div>법률</div>
           </div>
           <div className="precedent">
-            {precedentNumber}
+            <div className="number">{precedentNumber}</div>
             <div>판례</div>
           </div>
           <div className="ordinance">
-            {ordinanceNumber}
+            <div className="number">{ordinanceNumber}</div>
             <div>조례</div>
           </div>
           <div className="news">
-            {newsNumber}
+            <div className="number">{newsNumber}</div>
             <div>뉴스</div>
           </div>
         </div>

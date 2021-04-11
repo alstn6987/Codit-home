@@ -10,7 +10,11 @@
     gap: 30px 25px;
 
     figure {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
         img {
             width: 140px;
         }
@@ -18,7 +22,7 @@
         figcaption {
             width: 180px;
             margin-top: 15px;
-            font-size: 17px;
+            font-size: 18px;
             text-align: center;
 
         }

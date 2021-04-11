@@ -1,0 +1,68 @@
+.MobileSection1 {
+
+    display: grid;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 180px);
+    color: black;
+    gap: 30px 25px;
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 140px;
+        }
+
+        figcaption {
+            width: 180px;
+            margin-top: 15px;
+            font-size: 17px;
+            text-align: center;
+
+        }
+    }
+    .container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        .wrapper {
+    
+            figure {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+    
+                img {
+                    width: 140px;
+                }
+    
+                figcaption {
+                    width: 180px;
+                    margin-top: 15px;
+                    font-size: 17px;
+                    text-align: center;
+    
+                }
+    
+            }
+    
+
+        }
+ 
+    }
+    figure:hover {
+        color: rgb(46, 152, 152);
+    }
+
+    em {
+        font-weight: bold;
+    }
+}
+

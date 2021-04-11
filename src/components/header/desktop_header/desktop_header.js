@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const DesktopHeader = () => {
   return (
     <>
-      <div className="header">
+      <div className="DesktopHeader">
         <button className="btn" id="subscription">
           뉴스레터 구독
         </button>
