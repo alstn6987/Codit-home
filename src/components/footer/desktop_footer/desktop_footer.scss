@@ -28,17 +28,23 @@
         .containerRight{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items:flex-end;
-            .logos{
-                justify-self: flex-end;
+            height: inherit;
+            button{
                 display: flex;
-                justify-self: center;
-                align-self: center;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+            }
+            .logos{
+                display: flex;
+                
                 img{
                     margin: 5px;
                 }
             }
+            
         }
 
     }
