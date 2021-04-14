@@ -26,8 +26,8 @@ const DesktopLogin = () => {
       <div className="container">
         <img className="bigLogo" src={codit_logo} alt="codit-logo" />
         <form onSubmit={onSubmit}>
-          <input type="email"></input>
-          <input type="password"></input>
+          <input type="email" placeholder="이메일 주소를 입력하세요"></input>
+          <input type="password" placeholder="비밀번호를 입력하세요"></input>
           <div className="chackBoxSection">
             <span>이메일 저장하기</span>
             <span>비밀번호를 잊으셨나요?</span>
@@ -35,9 +35,12 @@ const DesktopLogin = () => {
           <button className="logIn">로그인</button>
         </form>
         <div className="joinSection">
-          코딧 서치에 처음 오셨나요? <Link>회원가입</Link>
+          <span>코딧 서치에 처음 오셨나요?</span>
+          <Link>
+            <span>회원가입</span>
+          </Link>
         </div>
-        <div>
+        <div className="footerSection">
           <img src={codit_footer_logo} alt="codit_footer_logo" />
           <span>Copyright c 2020 CODIT Corp.All right Reserved</span>
         </div>

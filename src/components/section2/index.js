@@ -1,6 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import DesktopSection2 from "./desktop_section2/desktop_section2";
+import TabletSection2 from "./tablet_section2/tablet_section2";
 
 const Section2 = () => {
   const isMobile = useMediaQuery({
@@ -9,17 +10,17 @@ const Section2 = () => {
 
   const isTablet = useMediaQuery({
     minWidth: 376,
-    maxWidth: 800,
+    maxWidth: 1420,
   });
 
   const isDesktop = useMediaQuery({
-    minWidth: 801,
+    minWidth: 1421,
   });
 
   return (
     <>
-      {/* {isTablet && }
-      {isMobile && } */}
+      {/* {isMobile && } */}
+      {isTablet && <TabletSection2 />}
       {isDesktop && <DesktopSection2 />}
     </>
   );

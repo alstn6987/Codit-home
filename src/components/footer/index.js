@@ -1,6 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import DesktopFooter from "./desktop_footer/desktop_footer";
+import TabletFooter from "./tablet_footer/tablet_footer";
 
 const Footer = () => {
   const isMobile = useMediaQuery({
@@ -9,18 +10,18 @@ const Footer = () => {
 
   const isTablet = useMediaQuery({
     minWidth: 376,
-    maxWidth: 800,
+    maxWidth: 1024,
   });
 
   const isDesktop = useMediaQuery({
-    minWidth: 801,
+    minWidth: 1025,
   });
 
   return (
     <>
       <>
-        {/* {isTablet && }
-        {isMobile && } */}
+        {/* {isMobile && } */}
+        {isTablet && <TabletFooter />}
         {isDesktop && <DesktopFooter />}
       </>
     </>

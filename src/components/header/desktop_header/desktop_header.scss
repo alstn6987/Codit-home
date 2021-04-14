@@ -1,26 +1,27 @@
 .DesktopHeader{
     display: flex;
-    width: 100%;
-    height: 60px;
-    padding: 5px;
-    background-color: white;
     position: fixed;
     justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 5px 50px;
+    background-color: white;
     white-space : nowrap;
     z-index: 10;
     border-bottom: 1px solid lightgray;
 
-    .btn{
+    box-sizing: border-box;
+    button{
         position: relative;
         font-size: 16px;
-        display: inline-flex;
         align-items: center;
         justify-content: center;
         border-radius: 0;
         cursor: pointer;
         font-weight: bold;
     }
-    .btn:hover::before {
+    button:hover::before {
         content: "";
         position: absolute;
         top:0;
@@ -29,6 +30,7 @@
         height: 100%;
         background-color: rgba(0,0,0,0.07);
     }
+
 }
 #subscription{ 
     width: 120px;
@@ -69,5 +71,4 @@
     background-color : white;
     border: none;
     color: black;
-    left: -10px;
 }

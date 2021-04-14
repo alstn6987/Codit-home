@@ -1,5 +1,5 @@
 import React from "react";
-import "./desktop_footer.scss";
+import "./tablet_footer.scss";
 import logo_footer from "../../../iamges/logo-footer.svg";
 import facebook from "../../../iamges/facebook.svg";
 import twitter from "../../../iamges/twitter.svg";
@@ -8,9 +8,9 @@ import youtube from "../../../iamges/youtube.svg";
 import blog from "../../../iamges/blog.svg";
 import icon_mail from "../../../iamges/icon-mail.svg";
 
-const DesktopFooter = () => {
+const TabletFooter = () => {
   return (
-    <div className="DesktopFooter">
+    <div className="TabletFooter">
       <div className="container">
         <div className="containerLeft">
           <img src={logo_footer} className="footerLogo" alt="코딧" />
@@ -73,4 +73,4 @@ const DesktopFooter = () => {
   );
 };
 
-export default DesktopFooter;
+export default TabletFooter;

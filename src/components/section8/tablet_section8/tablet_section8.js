@@ -2,11 +2,11 @@ import React from "react";
 import logo_government from "../../../iamges/logo-government@2x.png";
 import logo_gpe from "../../../iamges/logo-gpe@2x.png";
 import logo_glg from "../../../iamges/logo-glg@2x.png";
-import "./desktop_section8.scss";
+import "./tablet_section8.scss";
 
-const DesktopSection8 = () => {
+const TabletSection8 = () => {
   return (
-    <div className="DesktopSection8">
+    <div className="TabletSection8">
       <div className="container">
         <figure>
           <img src={logo_government} className="miso" alt="행정안전부" />
@@ -29,4 +29,4 @@ const DesktopSection8 = () => {
   );
 };
 
-export default DesktopSection8;
+export default TabletSection8;

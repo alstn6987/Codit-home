@@ -1,7 +1,7 @@
 // 데이터 현황 표기 섹션
 
 import React from "react";
-import "./desktop_section2.scss";
+import "./tablet_section2.scss";
 
 const month = 3;
 
@@ -30,9 +30,9 @@ const newsNumber_c = newsNumber
   .toString()
   .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
-const DesktopSection2 = () => {
+const TabletSection2 = () => {
   return (
-    <div className="DesktopSection2">
+    <div className="TabletSection2">
       <div>
         <div className="container1">
           <h1>
@@ -71,4 +71,4 @@ const DesktopSection2 = () => {
   );
 };
 
-export default DesktopSection2;
+export default TabletSection2;

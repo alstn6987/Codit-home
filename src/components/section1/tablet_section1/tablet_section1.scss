@@ -1,0 +1,35 @@
+.TabletSection1 {
+    display: grid;
+    height: 700px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(3, 180px);
+    color: black;
+    gap: 30px 25px;
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 140px;
+        }
+
+        figcaption {
+            width: 180px;
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+
+        }
+    }
+    figure:hover{
+        color:rgb(46, 152, 152);
+    }
+    em {
+        font-weight: bold;
+    }
+}
