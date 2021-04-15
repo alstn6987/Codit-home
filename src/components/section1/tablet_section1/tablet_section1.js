@@ -10,7 +10,7 @@ import "./tablet_section1.scss";
 const TabletSection1 = () => {
   return (
     <div className="TabletSection1">
-      <Link to="/">
+      <Link to="/app/bill">
         <figure>
           <img src={btn_bill} alt="bill" />
           <figcaption>

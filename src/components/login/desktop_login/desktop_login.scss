@@ -27,7 +27,7 @@
             input {
                 height: 48px;
                 width: inherit;
-                margin-bottom: 20px;
+                margin-bottom: 18px;
             }
 
             .chackBoxSection {
@@ -36,16 +36,48 @@
                 align-items: center;
                 width: inherit;
 
+                button {
+                    padding: 0em;
+                    border: none;
+                    height: 0;
+
+                    img {
+                        cursor: pointer;
+                    }
+                }
+
                 span {
                     display: flex;
                 }
             }
 
             button.logIn {
+                position: relative;
+                font-size: 16px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                cursor: pointer;
+                font-weight: bold;
+
                 height: 52px;
                 width: inherit;
                 margin-bottom: 20px;
+                color: white;
+                border: #30d8a1;
+                background-color: #30d8a1;
+
             }
+
+            // button:hover::before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: rgba(0, 0, 0, 0.07);
+            // }
         }
 
         .joinSection {
@@ -54,6 +86,7 @@
             align-items: center;
             width: inherit;
             margin-bottom: 40px;
+
             span {
                 margin: 0 10px;
             }
@@ -72,11 +105,11 @@
             font-size: 16px;
         }
 
-        .footerSection{
+        .footerSection {
             display: flex;
             justify-content: center;
 
-            img{
+            img {
                 margin-right: 30px;
             }
         }

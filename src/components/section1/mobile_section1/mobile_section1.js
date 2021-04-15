@@ -20,7 +20,7 @@ const MobileSection1 = () => {
             interval={5000}
             showIndicators={false}
           >
-            <Link to="/">
+            <Link to="/app/bill">
               <figure>
                 <img src={btn_bill} alt="bill" />
                 <figcaption>
