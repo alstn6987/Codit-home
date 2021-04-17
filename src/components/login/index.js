@@ -19,8 +19,8 @@ const Login = () => {
   return (
     <>
       <>
-        {/* {isTablet && }
-        {isMobile && } */}
+        {isTablet && <DesktopLogin />}
+        {isMobile && <DesktopLogin />}
         {isDesktop && <DesktopLogin />}
       </>
     </>

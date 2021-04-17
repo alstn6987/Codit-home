@@ -16,9 +16,10 @@
         img.allinone {
             width: 450px;
         }
+
         .textBlock {
             margin-top: 40px;
-            
+
             h1 {
                 font-size: 30px;
                 font-weight: bold;
@@ -29,6 +30,10 @@
                 font-size: 16px;
                 margin-bottom: 20px;
                 line-height: 200%;
+            }
+
+            .grayColor {
+                color: gray;
             }
         }
     }

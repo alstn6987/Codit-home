@@ -2,33 +2,22 @@
 
 import React from "react";
 import "./desktop_section2.scss";
+import AnimatedNumber from "animated-number-react";
 
 const month = 3;
-
 const billNumber = 80462;
-const billnumber_c = billNumber
-  .toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 const policyNumber = 48495;
-const policyNumber_c = policyNumber
-  .toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 const lawNumber = 5045;
-const lawNumber_c = lawNumber
-  .toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 const precedentNumber = 81246;
-const precedentNumber_c = precedentNumber
-  .toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 const ordinanceNumber = 121272;
-const ordinanceNumber_c = ordinanceNumber
-  .toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 const newsNumber = 45584403;
-const newsNumber_c = newsNumber
-  .toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+
+const changeNumber = (value) => {
+  return value
+    .toFixed(0)
+    .toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+};
 
 const DesktopSection2 = () => {
   return (
@@ -42,27 +31,45 @@ const DesktopSection2 = () => {
         </div>
         <div className="container2">
           <div className="bill">
-            <div className="number">{billnumber_c}</div>
+            <div className="number">
+              <AnimatedNumber value={billNumber} formatValue={changeNumber} />
+            </div>
             <div>의안</div>
           </div>
           <div className="policy">
-            <div className="number">{policyNumber_c}</div>
+            <div className="number">
+              <AnimatedNumber value={policyNumber} formatValue={changeNumber} />
+            </div>
             <div>정책</div>
           </div>
           <div className="law">
-            <div className="number">{lawNumber_c}</div>
+            <div className="number">
+              <AnimatedNumber value={lawNumber} formatValue={changeNumber} />
+            </div>
             <div>법률</div>
           </div>
           <div className="precedent">
-            <div className="number">{precedentNumber_c}</div>
+            <div className="number">
+              <AnimatedNumber
+                value={precedentNumber}
+                formatValue={changeNumber}
+              />
+            </div>
             <div>판례</div>
           </div>
           <div className="ordinance">
-            <div className="number">{ordinanceNumber_c}</div>
+            <div className="number">
+              <AnimatedNumber
+                value={ordinanceNumber}
+                formatValue={changeNumber}
+              />
+            </div>
             <div>조례</div>
           </div>
           <div className="news">
-            <div className="number">{newsNumber_c}</div>
+            <div className="number">
+              <AnimatedNumber value={newsNumber} formatValue={changeNumber} />
+            </div>
             <div>뉴스</div>
           </div>
         </div>

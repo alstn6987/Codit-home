@@ -35,11 +35,13 @@
                 justify-content: space-between;
                 align-items: center;
                 width: inherit;
+                height: 20px;
 
                 button {
                     padding: 0em;
                     border: none;
                     height: 0;
+                    margin-right: 4px;
 
                     img {
                         cursor: pointer;
@@ -48,6 +50,13 @@
 
                 span {
                     display: flex;
+                    color: gray;
+                    font-size: 14px;
+                }
+
+                .searchAccount {
+                    color: #30d8a1;
+                    text-decoration: underline;
                 }
             }
 
@@ -69,15 +78,15 @@
 
             }
 
-            // button:hover::before {
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     width: 100%;
-            //     height: 100%;
-            //     background-color: rgba(0, 0, 0, 0.07);
-            // }
+            button.logIn:hover::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: inherit;
+                height: inherit;
+                background-color: rgba(0, 0, 0, 0.07);
+            }
         }
 
         .joinSection {
@@ -90,6 +99,13 @@
             span {
                 margin: 0 10px;
             }
+
+            .signUp {
+                color: #30d8a1;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+
         }
 
         div {
@@ -111,6 +127,11 @@
 
             img {
                 margin-right: 30px;
+            }
+
+            span {
+                font-size: 14px;
+                color: gray;
             }
         }
     }

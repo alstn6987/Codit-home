@@ -9,49 +9,109 @@ import axios from "axios";
 
 const DesktopLogin = () => {
   const [posts, setPosts] = useState("1");
+  const [checkActive, setCheck] = useState(false);
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [age, setAge] = useState("0");
+  const emailRegex = /\S+@\S+.\S+/;
+  const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
-  const onSubmit = useEffect((e) => {
-    // e.preventDefault();
+  const validateEmail = (event) => {
+    setEmail(event.target.value);
+    if (!emailRegex.test(email)) {
+      setEmailError("email 부적절");
+    } else {
+      setEmailError("");
+    }
+  };
+  const vaildatePassword = (event) => {
+    setPassword(event.target.value);
+    if (!passwordRegex.test(password)) {
+      setPasswordError("password 부적절");
+    } else {
+      setPasswordError("");
+    }
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      email: email,
+      password: password,
+    };
+
     try {
-      axios.post("http://localhost:4000/events").then((res) => {
-        setPosts(res.data.id);
-        console.log(posts);
+      axios.post("http://localhost:4000/login", data).then((res) => {
+        console.log(res.data);
+        if (res.data === "accountOk") {
+          sessionStorage.setItem("isAuthorized", true);
+          // histroy.push("/");
+        }
       });
     } catch (error) {
       console.log(error.message);
     }
-  });
+  };
+  const onAccount = (e) => {};
+  useEffect((e) => {}, [email, password, age]);
+
+  const onCheck = () => setCheck(!checkActive);
 
   return (
     <div className="DesktopLogin">
       <div className="container">
         <img className="bigLogo" src={codit_logo} alt="codit-logo" />
         <form onSubmit={onSubmit}>
-          <input type="email" placeholder="이메일 주소를 입력하세요"></input>
-          <input type="password" placeholder="비밀번호를 입력하세요"></input>
+          <input
+            type="email"
+            placeholder="이메일 주소를 입력하세요"
+            value={email}
+            onChange={(e) => validateEmail(e)}
+          ></input>
+          {emailError && <div style={{ color: "red" }}>{emailError}</div>}
+
+          <input
+            type="password"
+            placeholder="비밀번호를 입력하세요"
+            value={password}
+            onChange={(e) => vaildatePassword(e)}
+          ></input>
+          {passwordError && <div style={{ color: "red" }}>{passwordError}</div>}
+
           <div className="chackBoxSection">
             <span>
-              <button type="button" onClick={console.log("체크박스 해제")}>
-                <img src={box_normal} alt="check-box" />
-              </button>
-              <button type="button" onClick={console.log("체크박스 체크")}>
-                <img src={box_selected} alt="check-box" />
-              </button>
+              {!checkActive ? (
+                <button type="button" onClick={onCheck}>
+                  <img src={box_normal} alt="check-box" />
+                </button>
+              ) : (
+                <button type="button" onClick={onCheck}>
+                  <img src={box_selected} alt="check-box" />
+                </button>
+              )}
               이메일 저장하기
             </span>
-            <span>비밀번호를 잊으셨나요?</span>
+            <Link>
+              <span className="searchAccount">비밀번호를 잊으셨나요?</span>
+            </Link>
           </div>
           <button className="logIn">로그인</button>
         </form>
         <div className="joinSection">
           <span>코딧 서치에 처음 오셨나요?</span>
           <Link>
-            <span>회원가입</span>
+            <span className="signUp">회원가입</span>
           </Link>
         </div>
         <div className="footerSection">
           <img src={codit_footer_logo} alt="codit_footer_logo" />
-          <span>Copyright c 2020 CODIT Corp.All right Reserved</span>
+          <span>
+            Copyright c 2020 <b>CODIT</b> Corp.All right Reserved
+          </span>
         </div>
       </div>
     </div>

@@ -9,11 +9,10 @@
         height: inherit;
         justify-content: space-between;
         padding: 20px;
-
         .containerLeft {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: flex-start;
             font-size: 14px;
 
@@ -24,7 +23,6 @@
 
             div {
                 color: gray;
-                
             }
             b{
                 color:black;
@@ -54,7 +52,6 @@
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-end;
-            height: inherit;
 
             button {
                 display: flex;
@@ -88,7 +85,7 @@
                 display: flex;
 
                 img {
-                    margin: 5px;
+                    margin-left: 10px;
                 }
             }
 

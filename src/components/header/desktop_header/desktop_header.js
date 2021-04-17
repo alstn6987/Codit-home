@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./desktop_header.scss";
 import arrow_down from "../../../iamges/ios-arrow-down.svg";
 import top_share from "../../../iamges/icon-top-share.svg";
@@ -6,7 +6,16 @@ import { Link, useLocation } from "react-router-dom";
 
 const DesktopHeader = () => {
   const location = useLocation();
+  const [rangActive, setRang] = useState(false);
+  let isAuthorized = sessionStorage.getItem("isAuthorized");
 
+  const logOut = ({ history }) => {
+    sessionStorage.removeItem("isAuthorized");
+    console.log(sessionStorage.removeItem("isAuthorized"));
+    history.push("/");
+  };
+
+  useEffect((e) => {}, [isAuthorized]);
   return (
     <>
       <div className="DesktopHeader">
@@ -15,13 +24,29 @@ const DesktopHeader = () => {
           <button id="introduce">회사소개</button>
         </Link>
         {location.pathname !== "/signin" && (
-          <Link to="/signin">
-            <button id="log-in">로그인</button>
-          </Link>
+          <div>
+            {isAuthorized ? (
+              <button id="log-out" onClick={logOut}>
+                로그아웃
+              </button>
+            ) : (
+              <Link to="/signin">
+                <button id="log-in">로그인</button>
+              </Link>
+            )}
+          </div>
         )}
-        <button id="rang">
+        <button id="rang" onClick={() => setRang(!rangActive)}>
           KR 
-          <img src={arrow_down} alt="아래꺽쇠" />
+          <img
+            src={arrow_down}
+            alt="아래꺽쇠"
+            style={
+              rangActive
+                ? { transform: "rotate(180deg)" }
+                : { transform: "rotate(0)" }
+            }
+          />
         </button>
         {location.pathname === "/" && (
           <button id="link-copy">

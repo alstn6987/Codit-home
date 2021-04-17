@@ -36,7 +36,7 @@ const TabletSection4 = () => {
               <img className="linkImg" src={ios_arrow2} alt="하늘색 화살표" />
             </Link>
           </div>
-          <p>※금융,바이오,디지털 영역 추가 예정</p>
+          <p className="grayColor">※금융,바이오,디지털 영역 추가 예정</p>
         </div>
       </div>
     </div>
