@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import "./desktop_header.scss";
 import arrow_down from "../../../iamges/ios-arrow-down.svg";
 import top_share from "../../../iamges/icon-top-share.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 const DesktopHeader = () => {
   const location = useLocation();
   const [rangActive, setRang] = useState(false);
   let isAuthorized = sessionStorage.getItem("isAuthorized");
 
-  const logOut = ({ history }) => {
+  const logOut = () => {
     sessionStorage.removeItem("isAuthorized");
     console.log(sessionStorage.removeItem("isAuthorized"));
     history.push("/");
   };
+  const history = useHistory();
 
   useEffect((e) => {}, [isAuthorized]);
   return (

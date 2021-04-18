@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "animated-number-react": "^0.1.2",
     "axios": "^0.21.1",
+    "history": "^5.0.0",
     "node-sass": "^5.0.0",
     "postcss-normalize": "^9.0.0",
     "qs": "^6.10.1",

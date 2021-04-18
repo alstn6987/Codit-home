@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import codit_logo from "../../../iamges/logo-codit-search@2x.png";
 import codit_footer_logo from "../../../iamges/icon-top-logo.svg";
 import box_normal from "../../../iamges/box-login-normal.svg";
@@ -8,16 +8,15 @@ import "./desktop_login.scss";
 import axios from "axios";
 
 const DesktopLogin = () => {
-  const [posts, setPosts] = useState("1");
   const [checkActive, setCheck] = useState(false);
-  const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [age, setAge] = useState("0");
+  const [loginState, setLoginState] = useState("");
   const emailRegex = /\S+@\S+.\S+/;
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  const history = useHistory();
 
   const validateEmail = (event) => {
     setEmail(event.target.value);
@@ -43,21 +42,26 @@ const DesktopLogin = () => {
       email: email,
       password: password,
     };
-
+    // setLoginState("waiting");
+    // console.log(loginState);
     try {
       axios.post("http://localhost:4000/login", data).then((res) => {
-        console.log(res.data);
-        if (res.data === "accountOk") {
+        setLoginState(res.data);
+        if (loginState === "accountOk") {
           sessionStorage.setItem("isAuthorized", true);
-          // histroy.push("/");
+          history.push("/");
+        } else if (loginState === "accountWrong") {
+          alert("로그인 실패");
         }
       });
     } catch (error) {
       console.log(error.message);
+      console.log("로그인 실패");
     }
   };
+
   const onAccount = (e) => {};
-  useEffect((e) => {}, [email, password, age]);
+  // useEffect((e) => {}, [email, password, loginState]);
 
   const onCheck = () => setCheck(!checkActive);
 
