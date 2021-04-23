@@ -43,25 +43,27 @@ const DesktopLogin = () => {
       password: password,
     };
     // setLoginState("waiting");
-    // console.log(loginState);
     try {
       axios.post("http://localhost:4000/login", data).then((res) => {
         setLoginState(res.data);
-        if (loginState === "accountOk") {
-          sessionStorage.setItem("isAuthorized", true);
-          history.push("/");
-        } else if (loginState === "accountWrong") {
-          alert("로그인 실패");
-        }
       });
     } catch (error) {
       console.log(error.message);
       console.log("로그인 실패");
+      alert("로그인 실패");
     }
   };
 
-  const onAccount = (e) => {};
-  // useEffect((e) => {}, [email, password, loginState]);
+  useEffect(() => {
+    if (loginState === "accountOk") {
+      sessionStorage.setItem("isAuthorized", true);
+      history.push("/");
+    } else if (loginState === "accountWrong") {
+      alert("로그인 실패");
+    }
+  }, [loginState]);
+
+  useEffect(() => {}, []);
 
   const onCheck = () => setCheck(!checkActive);
 
