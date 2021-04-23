@@ -7,9 +7,7 @@ const userReducer = (state, action) => {
     case userTypes.USER_DELETE:
       return {};
     case userTypes.USER_LOGIN:
-      return {
-          
-      };
+      return {};
     case userTypes.USER_LOGOUT:
       return {};
     case userTypes.USER_REGISTER:
@@ -18,7 +16,5 @@ const userReducer = (state, action) => {
       return {};
   }
 };
-
-const 
 
 export default userReducer;

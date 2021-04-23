@@ -29,7 +29,7 @@ function requested(bool = false) {
 
 const login = async (user) => {
   return (dispatch) => {
-    dispatch(request(true));
+    dispatch(requested(true));
     axios
       .post("http://localhost:4000/login", user)
       .then((response) => {
