@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -13,6 +13,9 @@ import Section8 from "../components/section8";
 import Section9 from "../components/section9";
 
 const HomeScreen = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />

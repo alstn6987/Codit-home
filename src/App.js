@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { PrivateRoute } from "./components/routes/priivateRoute";
 import BillScreen from "./screens/bill_screen";
 import Covid19Screen from "./screens/covid19_screen";
 import HomeScreen from "./screens/home_screen";
@@ -10,6 +11,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
+        {/* <PrivateRoute exact path="/" component={HomeScreen} /> */}
         <Route exact path="/" component={HomeScreen} />
         <Route path="/signin" component={SignInScreen} />
         <Route path="/app/bill" component={BillScreen} />

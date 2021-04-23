@@ -8,13 +8,14 @@ const DesktopHeader = () => {
   const location = useLocation();
   const [rangActive, setRang] = useState(false);
   let isAuthorized = sessionStorage.getItem("isAuthorized");
+  const history = useHistory();
 
   const logOut = () => {
     sessionStorage.removeItem("isAuthorized");
     console.log(sessionStorage.removeItem("isAuthorized"));
     history.push("/");
+    window.scrollTo(0, 0);
   };
-  const history = useHistory();
 
   useEffect((e) => {}, [isAuthorized]);
   return (
