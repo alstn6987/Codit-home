@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import codit_logo from "../../../iamges/logo-codit-search@2x.png";
 import codit_footer_logo from "../../../iamges/icon-top-logo.svg";
 import box_normal from "../../../iamges/box-login-normal.svg";
 import box_selected from "../../../iamges/box-selected-login.svg";
 import "./desktop_login.scss";
 import axios from "axios";
+import { loginAction } from "../../../actions";
 
 const DesktopLogin = () => {
   const [checkActive, setCheck] = useState(false);
@@ -17,6 +19,8 @@ const DesktopLogin = () => {
   const emailRegex = /\S+@\S+.\S+/;
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
   const history = useHistory();
+  const authorize = useSelector((state) => state.loginReducer.authorize);
+  const dispatch = useDispatch();
 
   const validateEmail = (event) => {
     setEmail(event.target.value);
@@ -35,33 +39,27 @@ const DesktopLogin = () => {
     }
   };
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     const data = {
       email: email,
       password: password,
     };
-    // setLoginState("waiting");
-    try {
-      axios.post("http://localhost:4000/login", data).then((res) => {
-        setLoginState(res.data);
-      });
-    } catch (error) {
-      console.log(error.message);
-      console.log("로그인 실패");
-      alert("로그인 실패");
-    }
+
+    dispatch(loginAction.login(data));
+    console.log(authorize);
   };
 
   useEffect(() => {
-    if (loginState === "accountOk") {
+    if (authorize) {
       sessionStorage.setItem("isAuthorized", true);
       history.push("/");
-    } else if (loginState === "accountWrong") {
-      alert("로그인 실패");
+    } else {
+      // alert("로그인 실패");
+      console.log("로그인 실패");
     }
-  }, [loginState]);
+  }, [authorize]);
 
   useEffect(() => {}, []);
 

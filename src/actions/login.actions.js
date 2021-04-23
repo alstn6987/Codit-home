@@ -8,6 +8,7 @@ export const loginAction = {
 };
 
 function success(user) {
+  console.log(user);
   return {
     type: "LOGIN_SUCCESS",
     user: user,
@@ -27,8 +28,8 @@ function requested(bool = false) {
   };
 }
 
-const login = async (user) => {
-  return (dispatch) => {
+function login(user) {
+  return async (dispatch) => {
     dispatch(requested(true));
     axios
       .post("http://localhost:4000/login", user)
@@ -37,12 +38,14 @@ const login = async (user) => {
           throw Error(response.statusText);
         }
         dispatch(requested(false));
+        console.log(response);
         return response;
       })
       .then((response) => {
-        if (response.account) dispatch(success(response.user));
-        else dispatch(failure());
+        if (response.status === 200) {
+          dispatch(success(response.data.user));
+        } else dispatch(failure());
       })
-      .catch(() => dispatch(failure()));
+      .catch((e) => dispatch(failure()));
   };
-};
+}
