@@ -10,10 +10,10 @@ const MobileHeader = () => {
   return (
     <>
       <div className="MobileHeader">
-        <button id="subscription">뉴스레터 구독</button>
+        {/* <button id="subscription">뉴스레터 구독</button>
         <Link to="/app/about">
           <button id="introduce">회사소개</button>
-        </Link>
+        </Link> */}
         {location.pathname !== "/signin" && (
           <Link to="/signin">
             <button id="log-in">로그인</button>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import DesktopSection4 from "./desktop_section4/desktop_section4";
+import MobileSection4 from "./mobile_section4/mobile_section4";
 import TabletSection4 from "./tablet_section4/tablet_section4";
 
 const Section4 = () => {
@@ -19,9 +20,8 @@ const Section4 = () => {
 
   return (
     <>
-      {/* {isMobile && } */}
+      {isMobile && <MobileSection4 />}
       {isTablet && <TabletSection4 />}
-
       {isDesktop && <DesktopSection4 />}
     </>
   );

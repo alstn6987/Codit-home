@@ -15,7 +15,6 @@ const DesktopLogin = () => {
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [loginState, setLoginState] = useState("");
   const emailRegex = /\S+@\S+.\S+/;
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
   const history = useHistory();
@@ -55,6 +54,7 @@ const DesktopLogin = () => {
     if (authorize) {
       sessionStorage.setItem("isAuthorized", true);
       history.push("/");
+      dispatch(loginAction.failure());
     } else {
       // alert("로그인 실패");
       console.log("로그인 실패");

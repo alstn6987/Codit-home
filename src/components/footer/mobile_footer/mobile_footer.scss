@@ -1,0 +1,102 @@
+.MobileFooter {
+    display: flex;
+    height: 340px;
+    justify-content: center;
+
+    .container {
+        display: flex;
+        width: 1000px;
+        height: inherit;
+        justify-content: space-between;
+        padding: 20px;
+        white-space: nowrap;
+        flex-direction: column;
+
+        .containerLeft {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            font-size: 14px;
+
+            img.footerLogo {
+                width: 80px;
+                margin-bottom: 25px;
+            }
+
+            div {
+                color: gray;
+            }
+
+            b {
+                color: black;
+            }
+
+            .info {
+                div {
+                    display: flex;
+                    margin-bottom: 5px;
+                }
+
+                hr {
+                    border: none;
+                    border-left: 1px solid black;
+                    width: 0px;
+                    height: 16px;
+                    margin: 0 10px;
+                }
+
+                margin-bottom: 10px;
+
+            }
+
+        }
+
+        .containerRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+            button {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+                width: 124px;
+                height: 39px;
+                font-weight: bold;
+                border-radius: 0;
+                border-width: 1px;
+                border-color: black;
+                background-color: white;
+                cursor: pointer;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+
+            button:hover::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.07);
+            }
+
+            .logos {
+                display: flex;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+
+        }
+
+    }
+}

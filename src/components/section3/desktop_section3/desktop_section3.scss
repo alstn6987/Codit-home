@@ -13,12 +13,26 @@
         height: inherit;
 
         img.allinone {
-            width: 450px;
+            width: 450px;            
             order: 1;
+            opacity: 0;
+            transform: translateY(20vh);
+            visibility: hidden;
+            transition: opacity 1200ms ease-out, transform 600ms ease-out,
+                visibility 1200ms ease-out;
+            will-change: opacity, transform, visibility;
         }
+
+        img.isVisible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+
+
         .textBlock {
             margin: 20px;
-            
+            white-space: nowrap;
             h1 {
                 font-size: 30px;
                 font-weight: bold;
@@ -30,6 +44,7 @@
                 margin-bottom: 20px;
                 line-height: 200%;
             }
+
             .grayColor {
                 color: gray;
             }

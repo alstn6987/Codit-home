@@ -51,9 +51,9 @@ const TabletFooter = () => {
               </div>
             </div>
           </div>
-          <div className="footerCopyright">
+          {/* <div className="footerCopyright">
             Copyright c 2020 CODIT Corp.All right Reserved
-          </div>
+          </div> */}
         </div>
         <div className="containerRight">
           <button>

@@ -11,12 +11,25 @@
         align-items: center;
         width: 900px;
         height: inherit;
+
         img.politician {
             width: 500px;
             align-self: flex-end;
+            opacity: 0;
+            transform: translateY(20vh);
+            visibility: hidden;
+            transition: opacity 1200ms ease-out, transform 600ms ease-out,
+                visibility 1200ms ease-out;
+            will-change: opacity, transform, visibility;
+        }
+        img.isVisible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
         }
         .textBlock {
             margin: 20px;
+            white-space: nowrap;
 
             h1 {
                 font-size: 30px;

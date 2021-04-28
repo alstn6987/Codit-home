@@ -2,12 +2,21 @@ import React from "react";
 import "./desktop_section7.scss";
 import alert_img from "../../../iamges/alert-img@2x.png";
 import img_comingsoon from "../../../iamges/img-comingsoon@2x.png";
+import { useInView } from "react-intersection-observer";
 
 const DesktopSection7 = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
   return (
     <div className="DesktopSection7">
-      <div className="container">
-        <img className="alert" src={alert_img} alt="추적 및 예고" />
+      <div className="container" ref={ref}>
+        <img
+          className={`alert ${inView ? "isVisible" : ""}`}
+          src={alert_img}
+          alt="추적 및 예고"
+        />
 
         <div className="textBlock">
           <img

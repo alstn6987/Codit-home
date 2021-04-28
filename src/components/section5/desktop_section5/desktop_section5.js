@@ -1,12 +1,21 @@
 import React from "react";
 import "./desktop_section5.scss";
 import recommendation_img from "../../../iamges/recommendation-img.svg";
+import { useInView } from "react-intersection-observer";
 
 const DesktopSection5 = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
   return (
     <div className="DesktopSection5">
-      <div className="container">
-        <img className="recommendation" src={recommendation_img} alt="추천" />
+      <div className="container" ref={ref}>
+        <img
+          className={`recommendation ${inView ? "isVisible" : ""}`}
+          src={recommendation_img}
+          alt="추천"
+        />
 
         <div className="textBlock">
           <h1>

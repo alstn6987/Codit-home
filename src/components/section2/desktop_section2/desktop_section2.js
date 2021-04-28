@@ -3,6 +3,7 @@
 import React from "react";
 import "./desktop_section2.scss";
 import AnimatedNumber from "animated-number-react";
+import { useInView } from "react-intersection-observer";
 
 const month = 3;
 const billNumber = 80462;
@@ -20,6 +21,11 @@ const changeNumber = (value) => {
 };
 
 const DesktopSection2 = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
   return (
     <div className="DesktopSection2">
       <div>
@@ -29,46 +35,61 @@ const DesktopSection2 = () => {
           </h1>
           <h2>2021년 {month}월 기준</h2>
         </div>
-        <div className="container2">
+        <div className={`container2 ${inView ? "isVisible" : ""}`} ref={ref}>
           <div className="bill">
             <div className="number">
-              <AnimatedNumber value={billNumber} formatValue={changeNumber} />
+              {inView && (
+                <AnimatedNumber value={billNumber} formatValue={changeNumber} />
+              )}
             </div>
             <div>의안</div>
           </div>
           <div className="policy">
             <div className="number">
-              <AnimatedNumber value={policyNumber} formatValue={changeNumber} />
+              {inView && (
+                <AnimatedNumber
+                  value={policyNumber}
+                  formatValue={changeNumber}
+                />
+              )}
             </div>
             <div>정책</div>
           </div>
           <div className="law">
             <div className="number">
-              <AnimatedNumber value={lawNumber} formatValue={changeNumber} />
+              {inView && (
+                <AnimatedNumber value={lawNumber} formatValue={changeNumber} />
+              )}
             </div>
             <div>법률</div>
           </div>
           <div className="precedent">
             <div className="number">
-              <AnimatedNumber
-                value={precedentNumber}
-                formatValue={changeNumber}
-              />
+              {inView && (
+                <AnimatedNumber
+                  value={precedentNumber}
+                  formatValue={changeNumber}
+                />
+              )}
             </div>
             <div>판례</div>
           </div>
           <div className="ordinance">
             <div className="number">
-              <AnimatedNumber
-                value={ordinanceNumber}
-                formatValue={changeNumber}
-              />
+              {inView && (
+                <AnimatedNumber
+                  value={ordinanceNumber}
+                  formatValue={changeNumber}
+                />
+              )}
             </div>
             <div>조례</div>
           </div>
           <div className="news">
             <div className="number">
-              <AnimatedNumber value={newsNumber} formatValue={changeNumber} />
+              {inView && (
+                <AnimatedNumber value={newsNumber} formatValue={changeNumber} />
+              )}
             </div>
             <div>뉴스</div>
           </div>

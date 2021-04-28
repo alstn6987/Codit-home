@@ -6,11 +6,11 @@ import TabletHeader from "./tablet_header/tablet_header";
 
 const Header = () => {
   const isMobile = useMediaQuery({
-    maxWidth: 375,
+    maxWidth: 540,
   });
 
   const isTablet = useMediaQuery({
-    minWidth: 376,
+    minWidth: 541,
     maxWidth: 1024,
   });
 

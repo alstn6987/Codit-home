@@ -21,7 +21,12 @@
         display:grid;
         grid-template-columns: repeat(6, 220px);
         gap: 30px 20px;
-
+        opacity: 0;
+        transform: translateY(20vh);
+        visibility: hidden;
+        transition: opacity 1200ms ease-out, transform 600ms ease-out,
+            visibility 1200ms ease-out;
+        will-change: opacity, transform, visibility;
         div{
             margin-bottom: 20px;
             font-size: 20px;
@@ -34,8 +39,9 @@
             color:rgb(22, 64, 125)
         }
     }
-    b{
-        font-weight:bold;
+    .container2.isVisible{
+        opacity: 1;
+        transform: none;
+        visibility: visible;
     }
-
 }

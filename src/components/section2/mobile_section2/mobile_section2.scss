@@ -5,38 +5,52 @@
     text-align: center;
     height: 500px;
     background-color: white;
-    .container1{
-        display:block;
-        margin-bottom:40px;
-        h1{
-            font-size: 30px;
+
+    .container1 {
+        display: block;
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 25px;
             margin-bottom: 10px;
         }
-        h2{
-            font-size: 16px;
-            color:gray;
+
+        h2 {
+            font-size: 14px;
+            color: gray;
         }
     }
-    .container2{
-        display:grid;
-        grid-template-columns: repeat(2, 220px);
-        grid-template-rows: repeat(3,100px);
+
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        grid-template-rows: repeat(3, 80px);
         gap: 30px 20px;
+        opacity: 0;
+        transform: translateY(20vh);
+        visibility: hidden;
+        transition: opacity 1200ms ease-out, transform 600ms ease-out,
+            visibility 1200ms ease-out;
+        will-change: opacity, transform, visibility;
 
-        div{
-            margin-bottom: 20px;
+        div {
+            margin-bottom: 16px;
             font-size: 20px;
-            color:gray;
+            color: gray;
 
         }
-        .number{
-            font-size: 40px;
+
+        .number {
+            font-size: 30px;
             font-weight: bold;
-            color:rgb(22, 64, 125)
+            color: rgb(22, 64, 125)
         }
-    }
-    b{
-        font-weight:bold;
-    }
 
+
+    }
+    .container2.isVisible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
 }

@@ -1,0 +1,20 @@
+.TabletBanner {
+    display: flex;
+    height: 600px;
+    background-color: rgb(1, 42, 68);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        display: flex;
+        width: 300px;
+        margin: 30px;
+    }
+    div{
+        display: flex;
+        font-size: 20px;
+        color: white;
+
+    }
+}

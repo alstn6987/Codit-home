@@ -1,0 +1,57 @@
+.MobileSection8 {
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3, 150px);
+        gap: 15px;
+        justify-content: center;
+        align-content: center;
+        width: 900px;
+        height: inherit;
+
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(20vh);
+            visibility: hidden;
+            transition: opacity 1200ms ease-out, transform 600ms ease-out,
+                visibility 1200ms ease-out;
+            will-change: opacity, transform, visibility;
+
+            img {
+                margin-bottom: 20px;
+            }
+
+            img.miso {
+                width: 140px;
+            }
+
+            img.gpe {
+                width: 140px;
+            }
+
+            img.glg {
+                width: 90px;
+            }
+            figcaption {
+                font-size: 14px;
+            }
+        }
+
+        figure.isVisible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+    }
+}

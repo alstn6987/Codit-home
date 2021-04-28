@@ -1,0 +1,61 @@
+.MobileSection7 {
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 900px;
+        height: inherit;
+
+        img.alert {
+            max-height: 250px;
+            min-height: 220px;
+            height: 80vw;
+            margin: 0 50px 0 50px;
+            opacity: 0;
+            transform: translateY(20vh);
+            visibility: hidden;
+            transition: opacity 1200ms ease-out, transform 600ms ease-out,
+                visibility 1200ms ease-out;
+            will-change: opacity, transform, visibility;
+        }
+        img.isVisible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+        .textBlock {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                white-space: nowrap;
+                text-align: center;
+            }
+
+            p {
+                font-size: 14px;
+                margin-bottom: 20px;
+                line-height: 150%;
+                white-space: nowrap;
+                text-align: center;
+            }
+
+            img.commingSoon {
+                width: 120px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
