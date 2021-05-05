@@ -6,11 +6,11 @@ import TabletSection1 from "./tablet_section1/tablet_section1";
 
 const Section1 = () => {
   const isMobile = useMediaQuery({
-    maxWidth: 500,
+    maxWidth: 440,
   });
 
   const isTablet = useMediaQuery({
-    minWidth: 500,
+    minWidth: 441,
     maxWidth: 1024,
   });
 

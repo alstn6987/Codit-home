@@ -6,7 +6,6 @@ import codit_footer_logo from "../../../iamges/icon-top-logo.svg";
 import box_normal from "../../../iamges/box-login-normal.svg";
 import box_selected from "../../../iamges/box-selected-login.svg";
 import "./desktop_login.scss";
-import axios from "axios";
 import { loginAction } from "../../../actions";
 
 const DesktopLogin = () => {
@@ -57,7 +56,7 @@ const DesktopLogin = () => {
       dispatch(loginAction.failure());
     } else {
       // alert("로그인 실패");
-      console.log("로그인 실패");
+      // console.log("로그인 실패");
     }
   }, [authorize]);
 
@@ -76,7 +75,7 @@ const DesktopLogin = () => {
             value={email}
             onChange={(e) => validateEmail(e)}
           ></input>
-          {emailError && <div style={{ color: "red" }}>{emailError}</div>}
+          {/* {emailError && <div className="error">{emailError}</div>} */}
 
           <input
             type="password"
@@ -84,7 +83,7 @@ const DesktopLogin = () => {
             value={password}
             onChange={(e) => vaildatePassword(e)}
           ></input>
-          {passwordError && <div style={{ color: "red" }}>{passwordError}</div>}
+          {/* {passwordError && <div className="error">{passwordError}</div>} */}
 
           <div className="chackBoxSection">
             <span>

@@ -1,4 +1,4 @@
-.MobileHeader{
+.MobileHeader {
     display: flex;
     position: fixed;
     justify-content: flex-end;
@@ -7,11 +7,29 @@
     height: 70px;
     padding: 5px 20px;
     background-color: white;
-    white-space : nowrap;
+    white-space: nowrap;
     z-index: 10;
     border-bottom: 1px solid lightgray;
 
-    button{
+    .Toastify__close-button {
+        display: none;
+    }
+
+    .Toastify__toast--default {
+        text-align: center;
+        color: white;
+        background-color: rgb(46, 152, 152);
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .bars {
+        width: 22px;
+        position: absolute;
+        left: 20px;
+    }
+
+    button {
         position: relative;
         font-size: 16px;
         align-items: center;
@@ -20,53 +38,97 @@
         cursor: pointer;
         font-weight: bold;
     }
+
     .btn:hover::before {
         content: "";
         position: absolute;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.07);
+        background-color: rgba(0, 0, 0, 0.07);
     }
+
+    .menu {
+        background: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 80px;
+        width: 120px;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+        .container {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            div {
+                border-bottom: 1px solid #dddddd;
+                text-decoration: none;
+                color: black;
+                padding: 15px 20px;
+                display: block;
+                text-align: center;
+                height: 50px;
+            }
+
+            div:hover {
+                background-color: rgba(0, 0, 0, 0.07);
+            }
+
+        }
+    }
+
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
 }
-#subscription{ 
+
+#subscription {
     width: 120px;
     height: 40px;
     margin: 7px;
-    background-color : rgb(46, 152, 152);
+    background-color: rgb(46, 152, 152);
     border: 1px solid rgb(46, 152, 152);
     color: white;
 }
-#introduce{
+
+#introduce {
     width: 120px;
     height: 40px;
     margin: 7px;
-    background-color : white;
+    background-color: white;
     border: 1px solid rgb(46, 152, 152);
     color: rgb(46, 152, 152);
 }
 
-#log-in{
+#log-in {
     height: 40px;
     margin: 7px;
-    background-color : white;
+    background-color: white;
     border: none;
     color: rgb(46, 152, 152);
 }
 
-#rang{
+#rang {
     height: 40px;
     margin: 7px;
-    background-color : white;
+    background-color: white;
     border: none;
     color: black;
 }
 
-#link-copy{
+#link-copy {
     height: 40px;
     margin: 7px;
-    background-color : white;
+    background-color: white;
     border: none;
     color: black;
     left: -5px;
